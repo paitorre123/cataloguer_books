@@ -8,11 +8,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CatalogoDeLibros {
 	
-	private ArrayList<Libro> libros;
+	private ArrayList<Libro> librosDeCatalogo;
 	@Autowired
-	private IBuscadorDeLibros<ArrayList<Libro>> bucadorDeLibros;
+	private IBuscadorDeLibros bucadorDeLibros;
 	
 	public void buscarLibros() {
-		this.buscarLibros();
+		this.bucadorDeLibros.buscarLibros();
+		System.out.println("Libros del catalogo: "+ this.librosDeCatalogo);
 	}
 }
